@@ -1,6 +1,6 @@
 {
   "name": "sxunco-openpay-custom-module",
-  "version": "1.0.3.1",
+  "version": "0.0.1",
   "description": "Generates the device_session_id and tokenize the credit cards with Openpay. Modified to actually work.",
   "main": "index.js",
   "scripts": {
