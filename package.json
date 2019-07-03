@@ -1,0 +1,43 @@
+{
+  "name": "sxunco-openpay-custom-module",
+  "version": "1.0.3.1",
+  "description": "Generates the device_session_id and tokenize the credit cards with Openpay. Modified to actually work.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-pay/openpay-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/open-pay/openpay-react-native/issues"
+  },
+  "homepage": "http://openpay.mx/",
+  "keywords": [
+    "openpay",
+    "react",
+    "react-native",
+    "payments",
+    "ios",
+    "android",
+    "react-native-component",
+    "credit-card"
+  ],
+  "author": "Karlo Lopez <karlo@qzbyte.com>",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.2.0",
+    "sxunco-custom-card-view": "git@github.com:karlolopez/sxunco-custom-card-view.git",
+    "react-native-device-info": "^0.22.2",
+    "react-native-elements": "^0.19.1",
+    "sprintf-js": "^1.1.1",
+    "user": "0.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "patch-package": "^5.1.1",
+    "postinstall-postinstall": "^1.0.0"
+  }
+}
