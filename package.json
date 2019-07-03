@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "buffer": "^5.2.0",
-    "sxunco-custom-card-view": "https://github.com/karlolopez/sxunco-custom-card-view.git",
+    "react-native-credit-card-input": "^0.4.1",
     "react-native-device-info": "^0.22.2",
     "react-native-elements": "^0.19.1",
     "sprintf-js": "^1.1.1",
