@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, WebView, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
-import { CreditCardInput } from 'react-native-credit-card-input-fullpage';
+import { CreditCardInput } from 'sxunco-custom-card-view';
 import uuidv4 from 'uuid/v4';
 import DeviceInfo from 'react-native-device-info';
 import sprintfJs from 'sprintf-js';
