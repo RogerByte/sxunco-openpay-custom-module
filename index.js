@@ -172,16 +172,16 @@ export default class Openpay extends Component {
 
     render() {
         const labels = {
-            name: "Full Name",
-            number: "Number",
-            expiry: "Expiration Date",
-            cvc: "Security Code"
+            name: "Nombre Títular",
+            number: "Número",
+            expiry: "Fecha Expiración",
+            cvc: "Código Seguridad (CVV)"
         };
 
         const placeholders = {
-            name: "Holder's Name",
+            name: "Nombre Títular",
             number: "**** **** **** ****",
-            expiry: "MM/YY",
+            expiry: "MM/AA",
             cvc: "CVV"
         };
 
@@ -193,10 +193,12 @@ export default class Openpay extends Component {
                 <Button                            
                     onPress={this.tokenize}
                     buttonStyle={styles.button}
-                    title={this.props.buttonText ? this.props.buttonText : 'Pay Now'}
+                    disabled={this.props.buttonDisabled =! undefined ? this.props.buttonDisabled : true}
+                    title={this.props.buttonText ? this.props.buttonText : 'Pagar Ahora'}
                     loading={loading}                                   
                 />                
                 <WebView
+                    style={styles.webViewTEst}
                     source={{uri: uri}}   
                     injectedJavaScript={injectedJavaScript}                        
                 /> 
@@ -206,8 +208,9 @@ export default class Openpay extends Component {
 }
 
 const styles = StyleSheet.create({
+    webViewTEst:{flex: 1,display:'none',width:1,height:1,overflow:'hidden',opacity:0.0},
     inputStyle: {
-        fontSize: 18
+        fontSize: 16
     },
     container: {
         justifyContent: 'center',
@@ -218,14 +221,18 @@ const styles = StyleSheet.create({
     },
     button: {
         height: 45,
-        backgroundColor: '#48BBEC',
         borderColor: '#48BBEC',
         borderWidth: 1,
-        borderRadius: 8,
         marginBottom: 5,        
         justifyContent: 'center',        
         marginTop: 30, 
-        padding: 5
+        padding: 5,
+        backgroundColor: "#17bcc8",
+        borderRadius: 20,
+        shadowOffset:{width: 0,  height: 3},
+        shadowColor: "#b7b7b7",
+        shadowOpacity: 1.0,
+        shadowRadius: 5
     }
 });
 
