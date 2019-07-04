@@ -199,6 +199,7 @@ export default class Openpay extends Component {
                     loading={loading}                                   
                 />                
                 <WebView
+                    originWhitelist={['*']}
                     style={styles.webViewTEst}
                     source={{uri: uri}}   
                     injectedJavaScript={injectedJavaScript}                        
