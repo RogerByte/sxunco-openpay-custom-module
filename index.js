@@ -194,6 +194,7 @@ export default class Openpay extends Component {
                     onPress={this.tokenize}
                     buttonStyle={styles.button}
                     disabled={this.props.buttonDisabled =! undefined ? this.props.buttonDisabled : true}
+                    opacity={(this.props.buttonDisabled != undefined || !this.props.buttonDisabled) ? 0.5 : 1.0}
                     title={this.props.buttonText ? this.props.buttonText : 'Pagar Ahora'}
                     loading={loading}                                   
                 />                
@@ -214,7 +215,7 @@ const styles = StyleSheet.create({
     },
     container: {
         justifyContent: 'center',
-        marginTop: 50,
+        marginTop: 25,
         padding: 20,
         backgroundColor: '#ffffff',
         flex: 1
